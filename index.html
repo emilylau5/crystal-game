@@ -3,11 +3,13 @@
 <head>
   <title>Crystal Game</title>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script type="text/javascript" src="assets/javascript/game.js"> </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
+<div class="all">
 <header>
-  <h1>Crystals Collector!</h1>
+  <h1 id="head">Crystals Collector!</h1>
 </header>
   <p>You will be given a random number at the start of the game.</p>
   <br>
@@ -16,14 +18,18 @@
   <p>You win the game if the value of different crystal clicks match the random number. You lose the game if the value goes above the random number</p>
   <br>
   <p>The values of the crystls change per game.</p>
-  <h1>Number to Guess: <span id="number-to-guess"></span></h1>
+  <h1>Number to Guess: <span id="guess">0</span></h1>
   <div>
-    <button id="btn1"><img src="assets/images/yellow-crystal.jpeg"></button>
-    <button id="btn2"><img src="assets/images/orange-crystal.jpeg"></button>
-    <button id="btn3"><img src="assets/images/purple-crystal.jpeg"></button>
-    <button id="btn4"><img src="assets/images/white-crystal.jpeg"></button>
+    <button id="btn1" value="0"><img src="assets/images/yellow-crystal.jpeg"></button>
+    <button id="btn2" value="1"><img src="assets/images/orange-crystal.jpeg"></button>
+    <button id="btn3" value="2"><img src="assets/images/purple-crystal.jpeg"></button>
+    <button id="btn4" value="3"><img src="assets/images/white-crystal.jpeg"></button>
   </div>
   <h4>Your total score is:</h4>
   <h1><span id="user-score"></span></h1>
+  <h3>Wins: <span id="win"></span></h3>
+  <h3>Losses: <span id="lose"></span></h3>
+  <script type="text/javascript" src="assets/javascript/game.js"> </script>
+  </div>
 </body>
 </html>
